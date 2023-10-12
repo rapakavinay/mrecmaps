@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MREC Maps - Keywords</title>
+    <link rel="stylesheet" href="Secound.css">
+    <style>
+        /* Add styles for the new buttons */
+        .new-buttons {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Keywords</h1>
+    </header>
+    <main>
+        <!-- Create 5 columns with 6 keywords each -->
+        <div class="keyword-columns">
+            <!-- Column 1 -->
+            <div class="keyword-column">
+                <button onclick="toggleButtons('Main_gate')">Main_gate</button>
+                <div class="new-buttons" id="Main_gate-buttons">
+                    <button onclick="openMap(37.7749, -122.4194)">Open Maps</button>
+                    <button onclick="getInfo('Main_gate')">Get Info</button>
+                </div>
+                <button onclick="toggleButtons('major_Auditorium')">major_Auditorium</button>
+                <div class="new-buttons" id="major_Auditorium-buttons">
+                    <button onclick="openMap(38.0, -123.0)">Open Maps</button>
+                    <button onclick="getInfo('major_Auditorium')">Get Info</button>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="keyword-column">
+                <button onclick="toggleButtons('Library')">Library</button>
+                <div class="new-buttons" id="Library-buttons">
+                    <button onclick="openMap(38.0, -123.0)">Open Maps</button>
+                    <button onclick="getInfo('Library')">Get Info</button>
+                </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="keyword-column">
+                <button onclick="toggleButtons('Stationary')">Stationary</button>
+                <div class="new-buttons" id="Stationary-buttons">
+                    <button onclick="openMap(38.0, -123.0)">Open Maps</button>
+                    <button onclick="getInfo('Stationary')">Get Info</button>
+                </div>
+            </div>
+
+            <!-- Column 4: Add "H&S" -->
+            <div class="keyword-column">
+                <button onclick="toggleButtons('H&S')">H&S</button>
+                <div class="new-buttons" id="H&S-buttons">
+                    <button onclick="openMap(38.0, -123.0)">Open Maps</button>
+                    <button onclick="getInfo('H&S')">Get Info</button>
+                </div>
+            </div>
+
+            <!-- Column 5: Add "Atms" -->
+            <div class="keyword-column">
+                <button onclick="toggleButtons('Atms')">Atms</button>
+                <div class="new-buttons" id="Atms-buttons">
+                    <button onclick="openMap(38.0, -123.0)">Open Maps</button>
+                    <button onclick="getInfo('Atms')">Get Info</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Create another row of columns for additional keywords -->
+        <div class="keyword-columns">
+            <!-- Column 1 for the second row -->
+            <div class="keyword-column">
+                <!-- Add buttons for additional keywords in this row -->
+            </div>
+
+            <!-- Column 2 for the second row -->
+            <div class="keyword-column">
+                <!-- Add buttons for additional keywords in this row -->
+            </div>
+
+            <!-- Add more columns for additional keywords in this row -->
+
+        </div>
+    </main>
+    <footer>
+        <!-- Add any footer content you want -->
+    </footer>
+    <script>
+        function openMap(latitude, longitude) {
+            const url = `https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`;
+            window.open(url);
+        }
+
+        function getInfo(keyword) {
+            // You can implement your getInfo functionality here
+            alert(`Getting info for ${keyword}`);
+        }
+
+        function toggleButtons(keyword) {
+            const buttonsDiv = document.getElementById(`${keyword}-buttons`);
+            buttonsDiv.style.display = buttonsDiv.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

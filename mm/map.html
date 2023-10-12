@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include the Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <!-- Your meta tags, title, and CSS links here -->
+</head>
+<body>
+    <header>
+        <h1>Location Map</h1>
+    </header>
+    <main>
+        <!-- Add a container for the map -->
+        <div id="map"></div>
+    </main>
+    <footer>
+        <!-- Add any footer content you want -->
+    </footer>
+    <script>
+        // JavaScript code for displaying the map based on the longitude and latitude parameters
+        function initMap() {
+            // Retrieve the longitude and latitude parameters from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const longitude = parseFloat(urlParams.get('longitude'));
+            const latitude = parseFloat(urlParams.get('latitude'));
+
+            // Check if the parameters are valid numbers
+            if (!isNaN(longitude) && !isNaN(latitude)) {
+                // Create a map centered at the specified coordinates
+                const map = new google.maps.Map(document.getElementById('map'), {
+                    center: { lat: latitude, lng: longitude },
+                    zoom: 15 // Adjust the zoom level as needed
+                });
+
+                // Create a marker for the location
+                const marker = new google.maps.Marker({
+                    position: { lat: latitude, lng: longitude },
+                    map: map,
+                    title: 'Location Title' // Add a title for the location
+                });
+            } else {
+                // Handle invalid or missing parameters
+                console.error('Invalid or missing longitude and latitude parameters.');
+            }
+        }
+    </script>
+</body>
+</html>

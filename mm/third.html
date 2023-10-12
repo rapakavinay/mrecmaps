@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MREC Maps - Locations</title>
+    <!-- Include the Google Maps JavaScript API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6uYM0QTnHMVZBdoy99HcYPqMCDTTHT4E"></script>
+    <style>
+        /* Add CSS styles for the map container */
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Location Map</h1>
+    </header>
+    <main>
+        <!-- Add a container for the map -->
+        <div id="map"></div>
+    </main>
+    <footer>
+        <!-- Add any footer content you want -->
+    </footer>
+    <script>
+        // JavaScript code for displaying the map
+        // JavaScript code for displaying the map
+function initMap() {
+    // Define the initial location (latitude and longitude)
+    var initialLocation = { lat: 40.7128, lng: -74.0060 }; // Example coordinates for New York City
+
+    // Create a map centered at the initial location
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: initialLocation,
+        zoom: 15 // Adjust the zoom level as needed
+    });
+
+    // Create a marker for the initial location
+    var marker = new google.maps.Marker({
+        position: initialLocation,
+        map: map,
+        title: 'Location Title' // Add a title for the location
+    });
+}
+
+    </script>
+    <script src="third.js"></script>
+</body>
+</html>

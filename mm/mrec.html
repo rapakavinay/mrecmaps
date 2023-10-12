@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset default margin and padding */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Global styles for fonts and background */
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #e2e3e5;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            display: flex;
+            justify-content: flex-start; /* Align items to the left */
+        }
+
+        .college-logo img {
+            width: 85px;
+            height: 85px;
+        }
+
+        .site-title {
+            font-size: 25px; /* Decreased font size */
+            text-transform: uppercase; /* Uppercase text */
+            letter-spacing: 2px; /* Increased letter spacing */
+            color: #007bff; /* Changed color to blue */
+            margin: 0 auto; /* Center the text horizontally */
+            width: fit-content; /* Set width to fit the content */
+            text-align: center; /* Center the text horizontally within the container */
+            padding: 20px 0;
+        }
+
+        /* Main content styles */
+        .container {
+            max-width: 100%; /* Remove the max-width to make it take up the full width */
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap; /* Allow columns to wrap to the next line */
+            justify-content: space-between; /* Space columns evenly */
+            align-items: center; /* Center items vertically */
+        }
+
+        /* Column styles */
+        .column {
+            flex: 1; /* Equal width for all columns */
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .column img {
+            width: 100px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .column h2 {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .column p {
+            font-size: 14px;
+        }
+
+        /* Button styles */
+        .click-button-container {
+            text-align: center; /* Center button horizontally */
+            margin-top: 100px; /* Adjusted margin for spacing */
+        }
+
+        .click-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 30px;
+            cursor: pointer;
+            border-radius: 25px; /* Rounded button */
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+
+        /* Add animation on button hover */
+        .click-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: scale(1.05); /* Scale up on hover */
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #0776e6;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Logo styles */
+        .logo-container {
+            text-align: center;
+            margin-top: 04px;
+        }
+
+        .logo img {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Team members section */
+        .team-members-headline {
+            text-align: start;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .team-members {
+            display: flex;
+            flex-wrap: wrap-reverse; /* Allow team members to wrap to the next line if necessary */
+            justify-content: space-between;
+        }
+
+        .team-member {
+            width: 10%; /* Adjust the width of each team member */
+            margin-top: 10px;
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .team-member img {
+            width: 100px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .team-member h2 {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .team-member p {
+            font-size: 14px;
+        }
+
+        /* Hover effect for columns and team members */
+        .column:hover, .team-member:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <title>MREC Maps Website</title>
+</head>
+<body>
+    <header>
+        <div class="college-logo">
+            <img src="MREC LOGO.jpeg" alt="College Logo">
+        </div>
+        <div class="site-title">
+            <h1>MREC MAPS</h1>
+        </div>
+    </header>
+
+    <!-- Description column below the header -->
+    <div class="column">
+        <h2>Our College</h2>
+        <p>Welcome to MREC Maps, your trusted source for campus information.</p>
+    </div>
+
+    <div class="container">
+        <!-- Principal section -->
+        <div class="column">
+            <img src="principle.jpeg" alt="Principal Photo">
+            <h2>DR. A. RAMASWAMY REDDY</h2>
+            <p>Director and Professor of CSE at Our Company. He obtained his PhD from a renowned institution in the faculty of Computer Science and Engineering. He has extensive experience in teaching and research, and has held various leadership positions in reputable institutions.</p>
+        </div>
+
+        <!-- Logo and Button -->
+        <div class="column">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="1.png" alt="Your Company Logo">
+                </div>
+                <div class="click-button-container">
+                    <button class="click-button" onclick="location.href='ex.html'">Click Here</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- HOD section -->
+        <div class="column">
+            <img src="DEENA1.jpeg" alt="HOD Photo">
+            <h2>DR. DEENA BABU MANDRU</h2>
+            <p>Department of Computer Science & Engineering at Our Company. Dr. Mandru brings a wealth of experience from leading institutions in the field. Her contributions have been significant in advancing computer science education and research.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 MREC Maps</p>
+    </footer>
+
+    <!-- Team members section -->
+    <h2 class="team-members-headline">Team Members</h2>
+    <div class="team-members">
+        <!-- Team member 1 -->
+        <div class="team-member">
+            <img src="shiva.jpg" alt="">
+            <h2>Shiva Prasad.R</h2>
+            <p>DEPT:- B.TECH AIML</p>
+            <p>3rd Year</p>
+        </div>
+
+        <!-- Team member 2 -->
+        <div class="team-member">
+            <img src="vinay.jpg" alt="">
+            <h2>Vinay Rapaka</h2>
+            <p>DEPT:- B.TECH AIML</p>
+            <p>3rd Year</p>
+        </div>
+
+        <!-- Team member 3 -->
+        <div class="team-member">
+            <img src="snehith.jpg" alt="">
+            <h2>Snehith Chowdary</h2>
+            <p>DEPT:- B.TECH AIML</p>
+            <p>3rd Year</p>
+        </div>
+
+        <!-- Team member 4 -->
+        <div class="team-member">
+            <img src="swetha.jpg" alt="">
+            <h2>Swetha A</h2>
+            <p>DEPT:- B.TECH AIML</p>
+            <p>3rd Year</p>
+        </div>
+
+        <!-- Team member 5 -->
+        <div class="team-member">
+            <img src="radhika.jpg" alt="">
+            <h2>Radhika T</h2>
+            <p>DEPT:- B.TECH AIML</p>
+            <p>3rd Year</p>
+        </div>
+    </div>
+</body>
+</html>

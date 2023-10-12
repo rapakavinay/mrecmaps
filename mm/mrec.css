@@ -1,0 +1,73 @@
+/* Reset some default styles for a clean slate */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for your website */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.college-logo .logo-img {
+    width: 200px; /* Adjust the width as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the logo horizontally */
+}
+
+.faculty {
+    display: flex;
+    justify-content: space-between; /* Space the elements evenly */
+    align-items: flex-start; /* Align items at the top */
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.photo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the photo horizontally */
+}
+
+.centered-logo {
+    text-align: center;
+    margin-top: 50px; /* Adjust the margin as needed for spacing */
+}
+
+.centered-logo .logo-img {
+    width: 200px; /* Adjust the width as needed */
+    height: auto;
+}
+
+.centered-logo h1 {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-top: 10px; /* Adjust the margin as needed for spacing */
+}
+
+.faculty h2 {
+    font-size: 20px; /* Adjust the font size as needed */
+}
+
+.faculty p {
+    font-size: 14px; /* Decrease the description size */
+}
+
+/* Add additional styles for the rest of your website here */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
